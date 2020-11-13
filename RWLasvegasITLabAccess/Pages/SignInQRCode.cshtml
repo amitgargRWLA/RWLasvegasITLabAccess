@@ -1,0 +1,8 @@
+﻿@page
+@model QRCodeModel
+@{
+    ViewData["Title"] = "Scan QR Code";
+}
+<h1>@ViewData["Title"]</h1>
+
+<img src="@String.Format("data:image/png;base64,{0}", Convert.ToBase64String(Model.BarcodeBytes))" height="300" width="300"/> 

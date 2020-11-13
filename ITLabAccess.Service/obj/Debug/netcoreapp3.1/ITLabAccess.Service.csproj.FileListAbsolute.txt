@@ -1,0 +1,14 @@
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Service\bin\Debug\netcoreapp3.1\ITLabAccess.Service.deps.json
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Service\bin\Debug\netcoreapp3.1\ITLabAccess.Service.dll
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Service\bin\Debug\netcoreapp3.1\ITLabAccess.Service.pdb
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Service\bin\Debug\netcoreapp3.1\ITLabAccess.Core.dll
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Service\bin\Debug\netcoreapp3.1\ITLabAccess.Data.dll
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Service\bin\Debug\netcoreapp3.1\ITLabAccess.Data.pdb
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Service\bin\Debug\netcoreapp3.1\ITLabAccess.Core.pdb
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Service\obj\Debug\netcoreapp3.1\ITLabAccess.Service.csprojAssemblyReference.cache
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Service\obj\Debug\netcoreapp3.1\ITLabAccess.Service.AssemblyInfoInputs.cache
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Service\obj\Debug\netcoreapp3.1\ITLabAccess.Service.AssemblyInfo.cs
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Service\obj\Debug\netcoreapp3.1\ITLabAccess.Service.csproj.CoreCompileInputs.cache
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Service\obj\Debug\netcoreapp3.1\ITLabAccess.Service.csproj.CopyComplete
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Service\obj\Debug\netcoreapp3.1\ITLabAccess.Service.dll
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Service\obj\Debug\netcoreapp3.1\ITLabAccess.Service.pdb

@@ -1,0 +1,9 @@
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Core\bin\Release\netcoreapp3.1\ITLabAccess.Core.deps.json
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Core\bin\Release\netcoreapp3.1\ITLabAccess.Core.dll
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Core\bin\Release\netcoreapp3.1\ITLabAccess.Core.pdb
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Core\obj\Release\netcoreapp3.1\ITLabAccess.Core.csprojAssemblyReference.cache
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Core\obj\Release\netcoreapp3.1\ITLabAccess.Core.AssemblyInfoInputs.cache
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Core\obj\Release\netcoreapp3.1\ITLabAccess.Core.AssemblyInfo.cs
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Core\obj\Release\netcoreapp3.1\ITLabAccess.Core.csproj.CoreCompileInputs.cache
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Core\obj\Release\netcoreapp3.1\ITLabAccess.Core.dll
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLabAccess.Core\obj\Release\netcoreapp3.1\ITLabAccess.Core.pdb

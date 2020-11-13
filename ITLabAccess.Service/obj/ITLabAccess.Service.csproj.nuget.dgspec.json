@@ -1,0 +1,269 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Amit Garg\\Devops\\ITLABAccess\\RWLasvegasITLabAccess\\ITLabAccess.Service\\ITLabAccess.Service.csproj": {}
+  },
+  "projects": {
+    "C:\\Amit Garg\\Devops\\ITLABAccess\\RWLasvegasITLabAccess\\ITLabAccess.Core\\ITLabAccess.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Amit Garg\\Devops\\ITLABAccess\\RWLasvegasITLabAccess\\ITLabAccess.Core\\ITLabAccess.Core.csproj",
+        "projectName": "ITLabAccess.Core",
+        "projectPath": "C:\\Amit Garg\\Devops\\ITLABAccess\\RWLasvegasITLabAccess\\ITLabAccess.Core\\ITLabAccess.Core.csproj",
+        "packagesPath": "C:\\Users\\amitg\\.nuget\\packages\\",
+        "outputPath": "C:\\Amit Garg\\Devops\\ITLABAccess\\RWLasvegasITLabAccess\\ITLabAccess.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\amitg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[3.1.5, 3.1.5]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[3.1.5, 3.1.5]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "version": "[3.1.5, 3.1.5]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x64": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Amit Garg\\Devops\\ITLABAccess\\RWLasvegasITLabAccess\\ITLabAccess.Data\\ITLabAccess.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Amit Garg\\Devops\\ITLABAccess\\RWLasvegasITLabAccess\\ITLabAccess.Data\\ITLabAccess.Data.csproj",
+        "projectName": "ITLabAccess.Data",
+        "projectPath": "C:\\Amit Garg\\Devops\\ITLABAccess\\RWLasvegasITLabAccess\\ITLabAccess.Data\\ITLabAccess.Data.csproj",
+        "packagesPath": "C:\\Users\\amitg\\.nuget\\packages\\",
+        "outputPath": "C:\\Amit Garg\\Devops\\ITLABAccess\\RWLasvegasITLabAccess\\ITLabAccess.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\amitg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Amit Garg\\Devops\\ITLABAccess\\RWLasvegasITLabAccess\\ITLabAccess.Core\\ITLabAccess.Core.csproj": {
+                "projectPath": "C:\\Amit Garg\\Devops\\ITLABAccess\\RWLasvegasITLabAccess\\ITLabAccess.Core\\ITLabAccess.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.entityframeworkcore": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[3.1.5, 3.1.5]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[3.1.5, 3.1.5]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "version": "[3.1.5, 3.1.5]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x64": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Amit Garg\\Devops\\ITLABAccess\\RWLasvegasITLabAccess\\ITLabAccess.Service\\ITLabAccess.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Amit Garg\\Devops\\ITLABAccess\\RWLasvegasITLabAccess\\ITLabAccess.Service\\ITLabAccess.Service.csproj",
+        "projectName": "ITLabAccess.Service",
+        "projectPath": "C:\\Amit Garg\\Devops\\ITLABAccess\\RWLasvegasITLabAccess\\ITLabAccess.Service\\ITLabAccess.Service.csproj",
+        "packagesPath": "C:\\Users\\amitg\\.nuget\\packages\\",
+        "outputPath": "C:\\Amit Garg\\Devops\\ITLABAccess\\RWLasvegasITLabAccess\\ITLabAccess.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\amitg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Amit Garg\\Devops\\ITLABAccess\\RWLasvegasITLabAccess\\ITLabAccess.Core\\ITLabAccess.Core.csproj": {
+                "projectPath": "C:\\Amit Garg\\Devops\\ITLABAccess\\RWLasvegasITLabAccess\\ITLabAccess.Core\\ITLabAccess.Core.csproj"
+              },
+              "C:\\Amit Garg\\Devops\\ITLABAccess\\RWLasvegasITLabAccess\\ITLabAccess.Data\\ITLabAccess.Data.csproj": {
+                "projectPath": "C:\\Amit Garg\\Devops\\ITLABAccess\\RWLasvegasITLabAccess\\ITLabAccess.Data\\ITLabAccess.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[3.1.5, 3.1.5]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[3.1.5, 3.1.5]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "version": "[3.1.5, 3.1.5]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x64": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

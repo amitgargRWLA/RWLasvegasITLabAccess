@@ -1,0 +1,400 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Sign in Access Form";
+    //Model.ToasterMessage=TempData["AddMessage"].ToString();
+}
+
+
+    <form method="POST"  id="User" class="container">
+        <input type="hidden" asp-for="NewUser.VendorList" id="VendorList" /> 
+    <div>
+<div class="form-group">
+        <div class="row">
+            <label class="control-label col-sm-2"></label>
+           <div class="col-lg-8">
+           <h2> <span> Sign in Access Form  </span></h2>
+           </div>
+       </div></div>
+
+    <div class="form-group">
+       <div class="row">
+        <label asp-for="NewUser.AccessCard" class="control-label col-sm-2"></label>
+                 <div class="col-lg-8">
+                <input id="inputAccessCard" onkeyup="HideValidation('#inputAccessCard');" asp-for="NewUser.AccessCard" placeholder="Enter Access Card Nunber" class="form-control" />
+                 <span class="text-danger" asp-validation-for="NewUser.AccessCard" ></span>
+                 </div>
+       </div>
+    </div>
+
+    <div class="form-group">
+       <div class="row">
+        <label asp-for="NewUser.IscompanyVendor" class="control-label col-sm-2"></label>
+                 <div class="col-lg-8">
+                <input type="radio"  asp-for="NewUser.IscompanyVendor"  onclick="Show();"  value="true" />&nbsp; Yes &nbsp;
+                <input type="radio" value="false" asp-for="NewUser.IscompanyVendor" onclick="Hide();"  checked="true"  />&nbsp;No &nbsp;
+               
+
+                 
+                 </div>
+       </div>
+    </div>
+    <div id="VendorForm" style="display: none;">
+    <div class="form-group">
+        <div class="row">
+        <label asp-for="NewUser.NumberofVendors" class="control-label col-sm-2"></label>
+        <div class="col-lg-8">
+            <input id="NumberofVendor" onkeyup="keyup();" onclick="keyup()" asp-for="NewUser.NumberofVendors" type="number" class="form-control" placeholder="No of Vendors" max="10" min="1"  />
+            <span class="text-danger" asp-validation-for="NewUser.NumberofVendors" ></span>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div id="data" class="form-group" style="display: none;">
+        <div class="row">
+            
+            <table class="table table-bordered">
+                
+            </table>
+        
+        </div>
+    </div>
+    
+    <div class="form-group" id="DivPurposeofVisit">
+        <div class="row">
+        <label asp-for="NewUser.PurposeofVisit" class="control-label col-sm-2"></label>
+        <div class="col-lg-8">
+            
+             <select Id="inputPurposeofVisit" onchange="HideListValue()" class="form-control" asp-for="NewUser.PurposeofVisit">
+                    <option value="0"> Select any value</option>
+                    <option value="App installation"> App installation</option>
+                    <option value="App maintenance"> App maintenance</option>
+                    <option value="Audit"> Audit</option>
+                    <option value="Demo/Training">Demo/Training</option>
+                    <option value="Hardware Installation"> Hardware Installation</option>
+                    <option value="Hardware Maintenance"> Hardware Maintenance</option>
+                    <option value="IT Service/Networking"> IT Service/Networking</option>
+                    <option value="Software Installation"> Software Installation</option>
+                    <option value="Software Maintenance"> Software Maintenance</option>
+                    <option value="Testing"> Testing</option>
+                    <option value="UAT"> UAT</option>
+                    
+                </select>
+        </div>
+        </div>
+    </div> 
+    <div class="form-group">
+        <div class="row">
+            <label class="control-label col-sm-2"></label>
+            <div class="col-lg-8">
+           
+            <button type="button" class="btn btn-primary" onclick="FinalSubmit()">Save</button>
+           </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    
+    </div>
+</form>
+
+
+ @if(Model.Message != "default")
+{
+   <div id="SucessMessage" class="alert alert-success">@Model.Message</div>
+
+   
+}
+
+@section Scripts
+{
+<partial name="_ValidationScriptsPartial"/>
+<script>
+  
+    
+    var IsVendorForm=false;
+   function Show()
+   {
+      
+       IsVendorForm=true;
+       $('#VendorForm').css("display", "block");
+        $('#DivPurposeofVisit').css("display", "none");
+       
+
+   }
+
+    function Hide()
+   {
+      
+      IsVendorForm=false;
+       $('#VendorForm').css("display", "none");
+        $('#DivPurposeofVisit').css("display", "block"); 
+        $("table tr").remove();
+        $('#data').css("display", "none");
+   }
+
+   function keyup()
+   {
+        $('#data').css("display", "block");
+
+        var counter=$("#NumberofVendor").val();
+        if(!isNaN(counter))
+        {
+           if(counter<11)
+        {
+            $("table tr").remove();
+        }
+        }
+        if(counter>10)
+        {
+            alert('Value must be less than or equal to 10.');
+            
+        }
+        else
+        {
+        for(i=0;i<counter;i++)
+    {
+     if(i==0)
+     {
+        
+        $("table").append(`<thead> 
+            <tr "style= text-align: center;"> 
+                <th>Vendor Name</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>PurposeofVisit</th>
+    </tr></thead>`);
+         
+     }   
+    $("table").append(`<tr> 
+        <td><input Id="VendorName${i}" required class="form-control" type="text" placeholder="Enter Vendor Name" asp-for="NewUser.VendorName">
+     </td>
+    <td><input Id="FirstName${i}" class="form-control" required type="text" placeholder="Enter First Name" asp-for="NewUser.FirstName">
+    </td>
+    <td><input Id="LastName${i}" type="text" required class="form-control" placeholder="Enter Last Name"  asp-for="NewUser.LastName">
+    </td>
+    <td><input Id="Email${i}" type="text" required class="form-control" placeholder="Enter Email"  asp-for="NewUser.Email"  >
+    </td>
+
+    <td>
+       <select Id="Purposeofvisit${i}" class="form-control">
+                    <option value="0"> Select any value</option>
+                    <option value="App installation"> App installation</option>
+                    <option value="App maintenance"> App maintenance</option>
+                    <option value="Audit"> Audit</option>
+                    <option value="Demo/Training">Demo/Training</option>
+                    <option value="Hardware Installation"> Hardware Installation</option>
+                    <option value="Hardware Maintenance"> Hardware Maintenance</option>
+                    <option value="IT Service/Networking"> IT Service/Networking</option>
+                    <option value="Software Installation"> Software Installation</option>
+                    <option value="Software Maintenance"> Software Maintenance</option>
+                    <option value="Testing"> Testing</option>
+                    <option value="UAT"> UAT</option>
+                    
+                </select>
+        
+    </td>
+    </tr>`);
+    }
+        }    
+
+    $('table tr input').rules('add', 'required')   
+   }
+
+
+   function FinalSubmit()
+   {
+       if(IsVendorForm)
+       {
+       var isValid=true;
+       var form_elements = $("table tr").find(":input");
+         $.each(form_elements, function( index3, value3 ) {
+             console.log($(value3).attr('id'));
+            
+         if($(value3).val()== '')
+         {
+            // alert('Please fill all field values');
+             $(value3).css('border-color','red');
+             isValid=false;
+         }
+         else
+         {
+             
+            //console.log();
+              var tempemail=$(value3).attr('id');
+                if (tempemail.indexOf('Email') >= 0)
+                {
+                   var EmailStatus=ValidateEmail(value3);
+                   if(!EmailStatus)
+                   {
+                       $(value3).css('border-color','red');
+                    isValid=false;
+                   }
+                   else
+                   {
+                        $(value3).css('border-color','#ced4da');
+                   }
+               
+                }
+                else
+                {
+                    $(value3).css('border-color','#ced4da');
+
+                }
+
+             
+         }
+         
+         });
+            var form_elements1 = $("table tr select")
+            //.find(":selected");
+        
+         $.each(form_elements1, function( index4, value4 ) {
+            //alert($(value4).attr('value'));
+            //alert($(value4).attr('id'));
+            //alert();
+            var SelectedId=$(value4).attr('id');
+            var Selectedoption=$(value4).find(':selected');
+            var selectedValue=$(Selectedoption).attr('value');
+            
+            if(selectedValue=='0')
+            {
+                console.log('true');
+                    $('#'+SelectedId).css('border-color','red');
+            }
+             else
+             {
+                 $('#'+SelectedId).css('border-color','#ced4da');
+             }
+             
+         
+         
+         });
+
+       if(!isValid)
+       {
+           return false;
+       }
+       
+       var table_rows=$("table tr");
+       var obj = [];
+       var vendorName='';
+       var FirsName='';
+       var LastName='';
+       var Email='';
+       var PurposeofVisit='';
+       $.each(table_rows, function( index, value ) {
+            /*var temp=index + ": " + $(value).find(":input") ;
+            console.log($(value).find(":input").length );
+   console.log(temp );
+   alert(temp);*/
+        if(index !=0)
+        {
+         var form_elements = $(value).find(":input");
+          var jform_elements1 = $(value).find(":selected");
+          console.log(jform_elements1);
+          PurposeofVisit=$(jform_elements1).attr('value');
+         // alert($(jform_elements1).attr('value'));
+         $.each(form_elements, function( index1, value1 ) {
+         var temp=index1 + ": " + $(value1).val() ;
+         if(index1==0)
+         {
+           vendorName= $(value1).val(); 
+         }
+         else if(index1==1)
+         {
+           FirsName= $(value1).val();   
+         }
+         else if(index1==2)
+         {
+             LastName= $(value1).val(); 
+         }
+         else if(index1==3)
+         {
+             Email=$(value1).val();
+         }
+         
+  // console.log(temp );
+  // alert(temp);
+});
+
+var tmp = {
+        'VendorName': vendorName,
+        'FirstName': FirsName,
+        'LastName': LastName,
+        'Email':    Email,
+        'PurposeofVisit':PurposeofVisit
+    }
+
+    obj.push(tmp);
+    vendorName='';
+    FirsName='';
+    LastName='';
+    Email='';
+    PurposeofVisit='';
+        }
+});
+$('#VendorList').val(JSON.stringify(obj));
+$('#User').submit();
+   } 
+   else
+   {
+       var isSucess=true;
+      // alert($('#inputPurposeofVisit').val());
+      if($('#inputPurposeofVisit :selected').val()=='0')
+      {
+          $('#inputPurposeofVisit').css('border-color','red');
+          isSucess= false;
+      }
+     if($('#inputAccessCard').val()=='')
+      {
+          $('#inputAccessCard').css('border-color','red');
+          isSucess= false;
+      }
+      if(!isSucess)
+        {
+            return false;
+        }
+      $('#NumberofVendor').val('0'); 
+
+      $('#User').submit();
+   }     
+   }
+  function HideValidation( controlName)
+  {
+     
+      if($(controlName).val()=='')
+      {
+          $(controlName).css('border-color','red');
+        }
+        else
+        {
+             $(controlName).css('border-color','#ced4da');
+        }
+     
+        
+  }
+
+  function HideListValue()
+  {
+
+       if($('#inputPurposeofVisit :selected').val()=='0')
+      {
+          $('#inputPurposeofVisit').css('border-color','red');
+          
+      }
+      else
+      {
+      $('#inputPurposeofVisit').css('border-color','#ced4da');
+      }
+  }
+  //var Counter=0;
+  //setInterval(function(){ alert('abc'); Counter=1; if(Counter==1){ }  }, 5000);
+  // setInterval(function(){ alert('aa');  }, 3000);
+  setTimeout(function(){ $('#SucessMessage').css('display','none') }, 10000);
+
+
+</script>
+}

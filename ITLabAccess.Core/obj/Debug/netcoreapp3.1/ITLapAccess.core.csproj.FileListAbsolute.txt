@@ -1,0 +1,5 @@
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLapAccess.core\bin\Debug\netcoreapp3.1\ITLapAccess.core.deps.json
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLapAccess.core\bin\Debug\netcoreapp3.1\ITLapAccess.core.dll
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLapAccess.core\obj\Debug\netcoreapp3.1\ITLapAccess.core.csprojAssemblyReference.cache
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLapAccess.core\obj\Debug\netcoreapp3.1\ITLapAccess.core.AssemblyInfoInputs.cache
+C:\Amit Garg\Devops\ITLABAccess\RWLasvegasITLabAccess\ITLapAccess.core\obj\Debug\netcoreapp3.1\ITLapAccess.core.AssemblyInfo.cs

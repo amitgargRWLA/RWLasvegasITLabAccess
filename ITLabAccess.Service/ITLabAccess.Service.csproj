@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\ITLabAccess.Core\ITLabAccess.Core.csproj" />
+    <ProjectReference Include="..\ITLabAccess.Data\ITLabAccess.Data.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  
+
+</Project>
